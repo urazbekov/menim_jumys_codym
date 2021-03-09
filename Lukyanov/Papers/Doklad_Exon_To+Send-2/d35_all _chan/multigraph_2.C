@@ -1,0 +1,85 @@
+# include "TCanvas.h"
+# include "TROOT.h"
+# include "TGraphErrors.h"
+# include "TF1.h"
+# include "TLegend.h"
+# include "TArrow.h"
+# include "TLatex.h"
+void multigraph_2(){
+   TCanvas *c1 = new TCanvas("c1","multipads",700,500);
+ // c1->SetGrid();
+
+   TMultiGraph *mg = new TMultiGraph();
+
+// create first graph
+   TGraphErrors *gr1 = new TGraphErrors("d_35MeV.txt");
+   gr1->SetMarkerColor(kBlue);
+   gr1->SetMarkerStyle(24);
+   mg->Add(gr1,"AP"); 
+
+// create 2 graph
+   TGraphErrors *gr2 = new TGraphErrors("t+8be_n_transfer.txt");
+   gr2->SetMarkerColor(kRed);
+   gr2->SetMarkerStyle(25);
+   mg->Add(gr2,"AP");
+
+// create 3 graph
+   TGraphErrors *gr3 = new TGraphErrors("3He_8Li_gs.txt");
+   gr3->SetMarkerColor(kBlack);
+   gr3->SetMarkerStyle(26);
+   mg->Add(gr3,"AP");
+
+// create 4 graph
+   TGraphErrors *gr4 = new TGraphErrors("4He_7Li_gs.txt");
+   gr4->SetMarkerColor(kBlack);
+   gr4->SetMarkerStyle(34);
+   mg->Add(gr4,"AP");
+
+// create 5 graph
+   TGraphErrors *gr5 = new TGraphErrors("6Li_d_35MeV.txt");
+   gr5->SetMarkerColor(kRed);
+   gr5->SetMarkerStyle(28);
+   mg->Add(gr5,"AP");
+
+// create 6 graph
+   TGraphErrors *gr6 = new TGraphErrors("7Li_d_35MeV.txt");
+   gr6->SetMarkerColor(kBlack);
+   gr6->SetMarkerStyle(32);
+   mg->Add(gr6,"AP");
+
+
+// create 7 graph
+   TGraphErrors *gr7 = new TGraphErrors("8Li_d_35MeV.txt");
+   gr7->SetMarkerColor(kRed);
+   gr7->SetMarkerStyle(33);
+   mg->Add(gr7,"AP");
+
+
+
+
+   mg->Draw("apl");
+   mg->GetXaxis()->SetTitle("#Theta (deg)");
+   mg->GetYaxis()->SetTitle("d#sigma/d#Omega (mb/sr)");
+    mg->SetTitle("6Li 7Li");
+// legend
+ gr1->SetName("g1");
+ gr2->SetName("g2");
+ gr3->SetName("g3");
+ gr4->SetName("g4");
+ gr5->SetName("g5");
+ gr6->SetName("g6");
+gr7->SetName("g7");
+TLegend* l=new TLegend(0.6, 0.65,0.85,0.9);
+l->AddEntry("g1","d+Be->elastic","p");
+l->AddEntry("g2","d+Be->t+^{8}Be","p");
+l->AddEntry("g3","d+Be->^{3}He+x","p");
+l->AddEntry("g4","d+Be->^{4}He+x","p");
+l->AddEntry("g5","d+Be->^{6}Li+x","p");
+l->AddEntry("g6","d+Be->^{7}Li+x","p");
+l->AddEntry("g7","d+Be->^{8}Li+x","p");
+       l->SetHeader("E_{d}=35 MeV");
+       l->Draw();
+///
+   gPad->Update();
+   gPad->Modified();
+}

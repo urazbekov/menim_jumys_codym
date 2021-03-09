@@ -1,0 +1,32 @@
+#!/usr/bin/env python
+import os
+import glob
+
+
+os.system("fresco < CC.frin")
+
+currentWorkDirectory = os.getcwd() 
+excNameList=["ground","first","second", "third"]
+
+fileNameList = sorted(glob.glob("fort.9*"))
+map(lambda x: os.rename(x, x + ".fam"),fileNameList)
+
+
+for i in range(0,len(excNameList)):
+    if not os.path.exists(excNameList[i]):
+        os.makedirs(excNameList[i])        
+    os.system("mv -vf fort.9"+str(i)+"* "+excNameList[i]+"/amplitude/")
+    os.chdir(excNameList[i])
+    os.system("getCrossSection")
+    os.system("plotdata multiplyNo")   
+    os.chdir(currentWorkDirectory)    
+
+
+
+
+#    filename = sorted(glob.glob(excNameList[i]+"/amplitude/"))
+#    map(lambda x: os.rename(x, x+".fam"),filename)
+
+
+
+#

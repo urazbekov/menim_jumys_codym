@@ -1,0 +1,354 @@
+Be9(d,a)Li7   MeV seq and sim
+NAMELIST
+&FRESCO hcm=0.05 rmatch=  15.00 rintp=0.10 hnl=0.5 rnl=12.00
+   centre=-1.0 
+   jtmin=0.0  jtmax=15 absend=-1.0 thmin=0.00 thmax=-180.00 thinc=1.00 
+   iter=2 iblock=0 nnu=36  chans=1 xstabl=0 smats=1
+   pel=1   elab(1:2)= 5.00 155.00  nlab(1:3)= 31 0 /
+
+&PARTITION namep='d' massp=2.0 zp=1 namet='Be9'  masst= 9.0 zt=4  nex=-3  /
+&STATES jp=1.0 bandp=1 ep=0.0  cpot=10 jt= 1.5 bandt=-1 et=   0.000 /
+&STATES copyp=1  cpot=10 jt= 2.5 bandt=-1 et=   2.429 /
+&STATES copyp=1  cpot=10 jt= 3.5 bandt=-1 et=   6.380 /
+
+&PARTITION namep='t' massp=3.0 zp=1  namet='Be8' masst= 8.0 zt= 4 nex=-3 qval=4.593 / 
+&STATES jp=0.5 bandp=1 ep=0.0 cpot=20 jt= 0.0 bandt= 1 et=   0.000   /
+&STATES copyp=1 cpot=20 jt= 2.0 bandt= 1 et=   3.03   /
+&STATES copyp=1 cpot=20 jt= 4.0 bandt= 1 et=   11.35   /
+
+!--------------------------------------------------------------------------------------------
+!           #3 Partition for np transfer
+!--------------------------------------------------------------------------------------------
+&PARTITION namep='He4-np'  massp=4.0 zp= 2 namet='Li7' masst= 7.0 zt= 3 nex=4  qval=7.1522/
+&STATES jp=0.0 bandp=1 ep=0.0 cpot=30 jt= 1.5 bandt=-1 et=0.0  		 	 /
+&STATES copyp=1 cpot=30 jt= 0.5 bandt=-1 et=0.428    				  	 /
+&STATES copyp=1 cpot=30 jt= 3.5 bandt=-1 et=4.63     					 /
+&STATES copyp=1 cpot=30 jt= 2.5 bandt=-1 et=7.459    					 /
+
+&PARTITION namep='3He' massp=3.0 zp=2  namet='Li8' masst= 8.0 zt= 3 nex=-4 qval=-11.393 / 
+&STATES jp=0.5 bandp=1 ep=0.0 cpot=20 jt= 2.0 bandt= 1 et=   0.000 /
+&STATES copyp=1 cpot=20 jt= 1.0 bandt=1 et=0.981    /
+&STATES copyp=1 cpot=20 jt= 3.0 bandt=1 et=2.255   /
+&STATES copyp=1 cpot=20 jt= 1.0 bandt=1 et=3.21   /
+
+!--------------------------------------------------------------------------------------------
+!           #5 Partition for pn transfer
+!--------------------------------------------------------------------------------------------
+&PARTITION namep='He4-pn'  massp=4.0 zp= 2 namet='Li7' masst= 7.0 zt= 3 nex=4  qval=7.1522/
+&STATES jp=0.0 bandp=1 ep=0.0 cpot=30 jt= 1.5 bandt=-1 et=0.0 		 	 /
+&STATES copyp=1 cpot=30 jt= 0.5 bandt=-1 et=0.428        				 /
+&STATES copyp=1 cpot=30 jt= 3.5 bandt=-1 et=4.63    					 /
+&STATES copyp=1 cpot=30 jt= 2.5 bandt=-1 et=7.459   					 /
+
+!--------------------------------------------------------------------------------------------
+!           #6 Partition for d transfer
+!--------------------------------------------------------------------------------------------
+&PARTITION namep='He4-d'  massp=4.0 zp= 2 namet='Li7' masst= 7.0 zt= 3 nex=4  qval=7.1522/
+&STATES jp=0.0 bandp=1 ep=0.0 cpot=30 jt= 1.5 bandt=-1 et=0.0 		  	  /
+&STATES copyp=1 cpot=30 jt= 0.5 bandt=-1 et=0.428     					/
+&STATES copyp=1 cpot=30 jt= 3.5 bandt=-1 et=4.63    					/
+&STATES copyp=1 cpot=30 jt= 2.5 bandt=-1 et=7.459   					/
+
+!--------------------------------------------------------------------------------------------
+!           #7 Partition for n-a transfer
+!--------------------------------------------------------------------------------------------
+&PARTITION namep='7Li-na'  massp=7.0 zp= 3 namet='4He' masst= 4.0 zt= 2 nex=4  qval=7.1522/
+&STATES jp=1.5 bandp=-1 ep=0.0    cpot=30 jt= 0.0 bandt=1 et=0.0 	  	/
+&STATES jp=0.5 bandp=-1 ep=0.428  cpot=30 copyt=1   				  	/
+&STATES jp=3.5 bandp=-1 ep=4.63   cpot=30 copyt=1   				  	 /
+&STATES jp=2.5 bandp=-1 ep=7.459  cpot=30 copyt=1   					 /
+
+
+&PARTITION namep='6Li'  massp=6.0 zp= 3 namet='5He' masst= 5.0 zt= 2 nex=-4  qval=-0.989/
+&STATES jp=1.0 bandp=1 ep=0.000   cpot=50 jt= 1.5 bandt=-1 et=0.0    /
+&STATES jp=3.0 bandp=1 ep=2.186   cpot=50 copyt=1   /
+&STATES jp=0.0 bandp=1 ep=3.563   cpot=50 copyt=1   /
+&STATES jp=2.0 bandp=1 ep=4.312   cpot=50 copyt=1  /
+
+!--------------------------------------------------------------------------------------------
+!           #9 Partition for a-n transfer
+!--------------------------------------------------------------------------------------------
+&PARTITION namep='7Li-an'  massp=7.0 zp= 3 namet='4He' masst= 4.0 zt= 2 nex=4  qval=7.1522/
+&STATES jp=1.5 bandp=-1 ep=0.0   cpot=40 jt= 0.0 bandt=1 et=0.0  		  /
+&STATES jp=0.5 bandp=-1 ep=0.428 cpot=40 copyt=1  						 /
+&STATES jp=3.5 bandp=-1 ep=4.63  cpot=40 copyt=1    					 /
+&STATES jp=2.5 bandp=-1 ep=7.459 cpot=40 copyt=1   						  /
+
+!--------------------------------------------------------------------------------------------
+!           #10 Partition for 5He transfer
+!--------------------------------------------------------------------------------------------
+&PARTITION namep='7Li-5He'  massp=7.0 zp= 3 namet='4He' masst= 4.0 zt= 2 nex=4  qval=7.1522/
+&STATES jp=1.5 bandp=-1 ep=0.0   cpot=40 jt= 0.0 bandt=1 et=0.0 	 	  /
+&STATES jp=0.5 bandp=-1 ep=0.428 cpot=40 copyt=1   					 	 /
+&STATES jp=3.5 bandp=-1 ep=4.63  cpot=40 copyt=1   					  	  /
+&STATES jp=2.5 bandp=-1 ep=7.459 cpot=40 copyt=1  					 	  /
+&PARTITION /
+
+&POT kp=1 type=0 p1=2.00 p2=9.00  p3=0.809 /	# d+9Be fold Global pot 19.5MeV
+&POT kp=1 type=1 p1=77.875 p2=0.87 p3=0.78  p4=0.0 p5=0.816 p6=0.802 /
+&POT kp=1 type=13 shape=10 itt=F p1=0.0 p2=2.1  p3=0.0 p4=0.0 p5=0.0  p6=0.0/
+&STEP ib=2 ia=1 k=2 str= 2.38 /
+&STEP ib=1 ia=2 k=2 str= 0.97 /
+
+&STEP ib=3 ia=1 k=2 str= 2.38 /
+&STEP ib=1 ia=3 k=2 str= 1.77 /
+
+&STEP ib=1 ia=1 k=2 str=-2.4 /
+&STEP ib=2 ia=2 k=2 str=-2.9 /
+&STEP ib=3 ia=3 k=2 str=-3.2 /
+&STEP /
+&POT kp=1 type=2 p1=0.0 p2=0.0 p3=0.83   p4=7.92 p5=0.816 p6=0.802 /
+&POT kp=1 type=13 shape=10 itt=F p1=0.0 p2=2.1  p3=0.0 p4=0.0 p5=0.0  p6=0.0/
+&STEP ib=2 ia=1 k=2 str= 2.38 /
+&STEP ib=1 ia=2 k=2 str= 0.97 /
+
+&STEP ib=3 ia=1 k=2 str= 2.38 /
+&STEP ib=1 ia=3 k=2 str= 1.77 /
+
+&STEP ib=1 ia=1 k=2 str=-2.4 /
+&STEP ib=2 ia=2 k=2 str=-2.9 /
+&STEP ib=3 ia=3 k=2 str=-3.2 /
+&STEP /
+&POT kp=1 type=3 p1=2.875 p2=0.77 p3=0.83  /
+
+&POT kp=20 type=0 ap=3.0 at=8.0 rc=0.826  / # 3H + 8Be Global NRV pot 15MeV
+&POT kp=20 type=1 p1=147.668 p2=0.607 p3=0.722 p4=32.7 p5=0.715 p6=1.157 /
+
+&POT kp=30 type=0 p1=4.00 p2=7.00  p3=0.71 / # 4He+7Li Global Pot 2
+&POT kp=30 type=1 p1=114.0 p2=0.772 p3=0.626 p4=22.866 p5=0.732 p6=0.5 /
+
+&POT kp=40 ap=7.0 at=4.0 rc=0.606  / # 7Li+4He Global pot
+&POT kp=40 type=1 p1=114.2 p2=0.599 p3=0.853  p4=24.781 p5=0.81 p6=0.5  /
+
+&POT kp=50 ap=6.0 at=5.0 rc=0.63  / # 6Li+5He Global pot
+&POT kp=50 type=1 p1=109.2 p2=0.642 p3=0.811  p4=46.781 p5=0.743 p6=0.884  /
+
+&POT kp=60 type=0 p1=4.00 p2=7.00  p3=0.809 / # 4He+7Li Global Pot 1
+&POT kp=60 type=1 p1=126.0 p2=0.847 p3=0.633 p4=13.866 p5=0.834 p6=0.5 /
+&POT kp=60 type=2 p1=0.0 p2=0.0 p3=0.0 p4=10.745 p5=0.946 p6=0.575 /
+
+&POT kp=1 type=0 at= 1.0 rc=   1.25  /
+&POT kp=1 type=1 p1=62.788 p2=1.25 p3=0.65 / 
+&POT kp=2 type=0 at= 2.0 rc=   1.25  /
+&POT kp=2 type=1 p1=64.211 p2=1.25 p3=0.65 / 
+&POT kp=3 type=0 at= 3.0 rc=   1.25  /
+&POT kp=3 type=1 p1=47.543 p2=1.25 p3=0.65 / 
+&POT kp=4 type=0 at= 4.0 rc=   1.25  /
+&POT kp=4 type=1 p1=87.234 p2=1.25 p3=0.65 / 
+&POT kp=5 type=0 at= 5.0 rc=   1.25  /
+&POT kp=5 type=1 p1=23.455 p2=1.25 p3=0.65 / 
+&POT kp=6 type=0 at= 6.0 rc=   1.25  /
+&POT kp=6 type=1 p1=45.355 p2=1.25 p3=0.65 / 
+&POT kp=7 type=0 at= 7.0 rc=   1.25  /
+&POT kp=7 type=1 p1=67.355 p2=1.25 p3=0.65 / 
+&POT kp=8 type=0 at= 8.0 rc=   1.25  /
+&POT kp=8 type=1 p1=73.224 p2=1.25 p3=0.65 / 
+&POT kp=9 type=0 at= 9.0 rc=   1.25  /
+&POT kp=9 type=1 p1=33.531 p2=1.25 p3=0.65 / 
+
+&POT /
+!-------------------------------------------------------------------------------------------------------------------------
+!									 np1 d+9Be->t+8Be
+!-------------------------------------------------------------------------------------------------------------------------
+&OVERLAP kn1=100 ic1=1 ic2=2 in= 1 kind=0 nn= 1 l=0 sn= 0.5 j= 0.5 kbpot= 3 be=  6.257 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 1.225/  
+&OVERLAP kn1=101 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  1.665 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-0.761 / 
+&OVERLAP kn1=102 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  4.695 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl= 0.816/  
+&OVERLAP kn1=103 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 9 be=  4.695 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl=-0.242/ 
+&OVERLAP kn1=104 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  2.265 isc=1 ipc=0 ia=2 ib=2 nam=1 ampl= 0.986/ 
+&OVERLAP kn1=105 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 9 be=  2.265 isc=1 ipc=0 ia=2 ib=2 nam=1 ampl=-0.417/  
+&OVERLAP kn1=106 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  0.100 isc=1 ipc=0 ia=2 ib=3 nam=1 ampl=-0.457/  
+&OVERLAP kn1=107 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be= 10.585 isc=1 ipc=0 ia=3 ib=2 nam=1 ampl=-0.374/  
+&OVERLAP kn1=108 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  6.635 isc=1 ipc=0 ia=3 ib=3 nam=1 ampl= 0.919/ 
+&OVERLAP kn1=109 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 9 be=  6.635 isc=1 ipc=0 ia=3 ib=3 nam=1 ampl=-0.429/  
+!-------------------------------------------------------------------------------------------------------------------------
+!									 np2 t+8Be->a+7Li
+!-------------------------------------------------------------------------------------------------------------------------
+&OVERLAP kn1=200 ic1=2 ic2=3 in= 1 kind=0 nn= 1 l=0 sn= 0.5 j= 0.5 kbpot= 4 be=  19.814 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-1.414/  
+&OVERLAP kn1=201 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 8 be=  17.254 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-1.204/ 
+&OVERLAP kn1=202 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 8 be=  14.245 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl=-0.748/  
+&OVERLAP kn1=203 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 8 be=  14.245 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl=-0.612/  
+&OVERLAP kn1=204 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 8 be=  17.682 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl= 0.736/  
+&OVERLAP kn1=205 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 8 be=  14.652 isc=1 ipc=0 ia=2 ib=2 nam=1 ampl=-0.677/ 
+&OVERLAP kn1=206 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 8 be=  18.854 isc=1 ipc=0 ia=3 ib=2 nam=1 ampl= 0.624/  
+&OVERLAP kn1=207 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 8 be=  10.534 isc=1 ipc=0 ia=3 ib=3 nam=1 ampl= 0.864/  
+&OVERLAP kn1=208 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 8 be=  10.534 isc=1 ipc=0 ia=3 ib=3 nam=1 ampl= 0.687/  
+&OVERLAP kn1=209 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 8 be=  20.904 isc=1 ipc=0 ia=4 ib=2 nam=1 ampl=-0.194/  
+&OVERLAP kn1=210 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 8 be=  20.904 isc=1 ipc=0 ia=4 ib=2 nam=1 ampl= 0.365/  
+&OVERLAP kn1=211 ic1=2 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 8 be=  12.584 isc=1 ipc=0 ia=4 ib=3 nam=1 ampl=-0.794/  
+!-------------------------------------------------------------------------------------------------------------------------
+!									 pn1 d+9Be->3He+6Li
+!-------------------------------------------------------------------------------------------------------------------------
+&OVERLAP kn1=300 ic1=1 ic2=4 in= 1 kind=0 nn= 1 l=0 sn= 0.5 j= 0.5 kbpot= 3 be=  5.493  isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 1.225/  
+&OVERLAP kn1=301 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  16.886 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-0.947/  
+&OVERLAP kn1=302 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 9 be=  16.886 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-0.319/  
+&OVERLAP kn1=303 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  17.867 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl= 0.454/  
+&OVERLAP kn1=304 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 9 be=  17.867 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl=-0.444/  
+&OVERLAP kn1=305 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  19.141 isc=1 ipc=0 ia=3 ib=1 nam=1 ampl=-0.592/  
+&OVERLAP kn1=306 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  20.096 isc=1 ipc=0 ia=4 ib=1 nam=1 ampl=-0.236/  
+&OVERLAP kn1=307 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 9 be=  20.096 isc=1 ipc=0 ia=4 ib=1 nam=1 ampl= 0.036/  
+&OVERLAP kn1=308 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  14.457 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl= 0.593/  
+&OVERLAP kn1=309 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 9 be=  14.457 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl= 0.515/  
+&OVERLAP kn1=310 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  15.438 isc=1 ipc=0 ia=2 ib=2 nam=1 ampl=-0.672/  
+&OVERLAP kn1=311 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  16.712 isc=1 ipc=0 ia=3 ib=2 nam=1 ampl=-0.571/  
+&OVERLAP kn1=312 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 9 be=  16.712 isc=1 ipc=0 ia=3 ib=2 nam=1 ampl=-0.171/  
+&OVERLAP kn1=313 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  17.667 isc=1 ipc=0 ia=4 ib=2 nam=1 ampl= 0.200/  
+&OVERLAP kn1=314 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  10.506 isc=1 ipc=0 ia=1 ib=3 nam=1 ampl=-0.323/  
+&OVERLAP kn1=315 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 9 be=  12.761 isc=1 ipc=0 ia=3 ib=3 nam=1 ampl=-0.899/  
+&OVERLAP kn1=316 ic1=1 ic2=4 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 9 be=  12.761 isc=1 ipc=0 ia=3 ib=3 nam=1 ampl=-0.564/  
+!-------------------------------------------------------------------------------------------------------------------------
+!									pn2 3He+6Li->4He+7Li
+!-------------------------------------------------------------------------------------------------------------------------
+&OVERLAP kn1=400 ic1=4 ic2=5 in= 1 kind=0 nn= 1 l=0 sn= 0.5 j= 0.5 kbpot= 4 be=  20.578 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-1.414 /  
+&OVERLAP kn1=401 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   2.033 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-0.988/ 
+&OVERLAP kn1=402 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=   2.033 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 0.237/ 
+&OVERLAP kn1=403 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   2.511 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl= 0.430/ 
+&OVERLAP kn1=404 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   8.713 isc=1 ipc=0 ia=3 ib=1 nam=1 ampl=-0.496/ 
+&OVERLAP kn1=405 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   9.492 isc=1 ipc=0 ia=4 ib=1 nam=1 ampl=-0.665/ 
+&OVERLAP kn1=406 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=   9.492 isc=1 ipc=0 ia=4 ib=1 nam=1 ampl=-0.275/ 
+&OVERLAP kn1=407 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   1.052 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl= 0.567/ 
+&OVERLAP kn1=408 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=   1.052 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl= 0.351/ 
+&OVERLAP kn1=409 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   1.530 isc=1 ipc=0 ia=2 ib=2 nam=1 ampl= 0.905/ 
+&OVERLAP kn1=410 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=   1.530 isc=1 ipc=0 ia=2 ib=2 nam=1 ampl= 0.331/ 
+&OVERLAP kn1=411 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   8.511 isc=1 ipc=0 ia=4 ib=2 nam=1 ampl= 0.767/ 
+&OVERLAP kn1=412 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   0.100 isc=1 ipc=0 ia=1 ib=3 nam=1 ampl= 0.581/ 
+&OVERLAP kn1=413 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   7.237 isc=1 ipc=0 ia=4 ib=3 nam=1 ampl=-0.660/ 
+&OVERLAP kn1=414 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=   7.237 isc=1 ipc=0 ia=4 ib=3 nam=1 ampl=-0.541/ 
+&OVERLAP kn1=415 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   6.458 isc=1 ipc=0 ia=3 ib=3 nam=1 ampl= 0.973/ 
+&OVERLAP kn1=416 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=   6.458 isc=1 ipc=0 ia=3 ib=3 nam=1 ampl=-0.404/ 
+&OVERLAP kn1=417 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   0.100 isc=1 ipc=0 ia=1 ib=4 nam=1 ampl=-0.617/ 
+&OVERLAP kn1=418 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=   0.100 isc=1 ipc=0 ia=1 ib=4 nam=1 ampl=-0.841/ 
+&OVERLAP kn1=419 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   0.100 isc=1 ipc=0 ia=2 ib=4 nam=1 ampl= 0.178/ 
+&OVERLAP kn1=420 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=   0.100 isc=1 ipc=0 ia=2 ib=4 nam=1 ampl= 0.331/ 
+&OVERLAP kn1=421 ic1=4 ic2=5 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=   6.282 isc=1 ipc=0 ia=4 ib=4 nam=1 ampl= 0.213/ 
+!-------------------------------------------------------------------------------------------------------------------------
+!									 d d+9Be->a+7Li
+!-------------------------------------------------------------------------------------------------------------------------
+&OVERLAP kn1=500 ic1=6 ic2=1 in= 1 kind=0 nn= 1 l=0 sn= 1.0 j= 1.0 kbpot= 4 be= 23.848 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 1.732 / 
+&OVERLAP kn1=501 ic1=6 ic2=1 in= 2 kind=0 nn= 2 l=0 sn= 1.0 j= 1.0 kbpot= 9 be= 16.694 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-0.155/  
+&OVERLAP kn1=502 ic1=6 ic2=1 in= 2 kind=0 nn= 1 l=2 sn= 1.0 j= 1.0 kbpot= 9 be= 16.694 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-0.180/  
+&OVERLAP kn1=503 ic1=6 ic2=1 in= 2 kind=0 nn= 1 l=2 sn= 1.0 j= 2.0 kbpot= 9 be= 16.694 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-0.100/ 
+&OVERLAP kn1=504 ic1=6 ic2=1 in= 2 kind=0 nn= 1 l=2 sn= 1.0 j= 3.0 kbpot= 9 be= 16.694 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 0.558/ 
+&OVERLAP kn1=505 ic1=6 ic2=1 in= 2 kind=0 nn= 2 l=0 sn= 1.0 j= 1.0 kbpot= 9 be= 17.174 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl=-0.252/ 
+&OVERLAP kn1=506 ic1=6 ic2=1 in= 2 kind=0 nn= 1 l=2 sn= 1.0 j= 1.0 kbpot= 9 be= 17.174 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl= 0.174/ 
+&OVERLAP kn1=507 ic1=6 ic2=1 in= 2 kind=0 nn= 1 l=2 sn= 1.0 j= 2.0 kbpot= 9 be= 17.174 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl=-0.323/ 
+&OVERLAP kn1=509 ic1=6 ic2=1 in= 2 kind=0 nn= 1 l=2 sn= 1.0 j= 3.0 kbpot= 9 be= 21.327 isc=1 ipc=0 ia=3 ib=1 nam=1 ampl= 0.709/ 
+&OVERLAP kn1=510 ic1=6 ic2=1 in= 2 kind=0 nn= 2 l=0 sn= 1.0 j= 1.0 kbpot= 9 be= 24.156 isc=1 ipc=0 ia=4 ib=1 nam=1 ampl= 0.712/ 
+&OVERLAP kn1=513 ic1=6 ic2=1 in= 2 kind=0 nn= 1 l=2 sn= 1.0 j= 3.0 kbpot= 9 be= 24.156 isc=1 ipc=0 ia=4 ib=1 nam=1 ampl=-0.520/ 
+!-------------------------------------------------------------------------------------------------------------------------
+!									 na2 t+8Be->7Li+a
+!-------------------------------------------------------------------------------------------------------------------------
+&OVERLAP kn1=600 ic1=2 ic2=7 in= 1 kind=0 nn= 2 l=1 sn= 0.0 j= 1.0 kbpot= 7 be=  2.468 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 1.0/  
+&OVERLAP kn1=601 ic1=2 ic2=7 in= 1 kind=0 nn= 2 l=1 sn= 0.0 j= 1.0 kbpot= 7 be=  1.990 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl= 1.0/  
+&OVERLAP kn1=602 ic1=2 ic2=7 in= 1 kind=0 nn= 1 l=3 sn= 0.0 j= 3.0 kbpot= 7 be=  0.100 isc=1 ipc=0 ia=1 ib=3 nam=1 ampl= 1.0/ 
+&OVERLAP kn1=603 ic1=2 ic2=7 in= 1 kind=0 nn= 1 l=3 sn= 0.0 j= 3.0 kbpot= 7 be=  0.100 isc=1 ipc=0 ia=1 ib=4 nam=1 ampl= 1.0/ 
+&OVERLAP kn1=604 ic1=2 ic2=7 in= 2 kind=0 nn= 3 l=0 sn= 0.0 j= 0.0 kbpot= 8 be=  0.100 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 1.0/ 
+&OVERLAP kn1=605 ic1=2 ic2=7 in= 2 kind=0 nn= 2 l=2 sn= 0.0 j= 2.0 kbpot= 8 be=  0.100 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl= 1.0/  
+&OVERLAP kn1=606 ic1=2 ic2=7 in= 2 kind=0 nn= 1 l=4 sn= 0.0 j= 4.0 kbpot= 8 be=  0.100 isc=1 ipc=0 ia=1 ib=3 nam=1 ampl= 1.0/ 
+!-------------------------------------------------------------------------------------------------------------------------
+!									an1 d+9Be->6Li+5He
+!-------------------------------------------------------------------------------------------------------------------------
+&OVERLAP kn1=70  ic1=1 ic2=8 in= 1 kind=0 nn= 1 l=2 sn= 0.0 j= 2.0 kbpot= 6 be=  1.474 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 0.907/  
+&OVERLAP kn1=71  ic1=1 ic2=8 in= 1 kind=0 nn= 2 l=0 sn= 0.0 j= 0.0 kbpot= 6 be=  1.474 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 0.077/  
+&OVERLAP kn1=72  ic1=1 ic2=8 in= 1 kind=0 nn= 1 l=2 sn= 0.0 j= 2.0 kbpot= 6 be=  0.100 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl= 0.943/  
+&OVERLAP kn1=73  ic1=1 ic2=8 in= 1 kind=0 nn= 1 l=2 sn= 0.0 j= 2.0 kbpot= 6 be=  0.100 isc=1 ipc=0 ia=1 ib=4 nam=1 ampl= 0.929/  
+&OVERLAP kn1=700 ic1=1 ic2=8 in= 2 kind=0 nn= 3 l=0 sn= 0.0 j= 0.0 kbpot= 9 be=  2.463 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-0.925/  
+&OVERLAP kn1=701 ic1=1 ic2=8 in= 2 kind=0 nn= 2 l=2 sn= 0.0 j= 2.0 kbpot= 9 be=  2.463 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 0.784/  
+&OVERLAP kn1=702 ic1=1 ic2=8 in= 2 kind=0 nn= 2 l=2 sn= 0.0 j= 2.0 kbpot= 9 be=  0.100 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl= 0.974/  
+&OVERLAP kn1=703 ic1=1 ic2=8 in= 2 kind=0 nn= 1 l=4 sn= 0.0 j= 4.0 kbpot= 9 be=  0.100 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl=-0.260/  
+&OVERLAP kn1=704 ic1=1 ic2=8 in= 2 kind=0 nn= 2 l=2 sn= 0.0 j= 2.0 kbpot= 9 be=  0.100 isc=1 ipc=0 ia=1 ib=3 nam=1 ampl= 0.882/  
+&OVERLAP kn1=705 ic1=1 ic2=8 in= 2 kind=0 nn= 1 l=4 sn= 0.0 j= 4.0 kbpot= 9 be=  0.100 isc=1 ipc=0 ia=1 ib=3 nam=1 ampl=-0.737/  
+!-------------------------------------------------------------------------------------------------------------------------
+!									 an2 6Li+5He->7Li+a
+!-------------------------------------------------------------------------------------------------------------------------
+&OVERLAP kn1=80  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=  7.251 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 0.657 /  
+&OVERLAP kn1=81  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=  7.251 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl=-0.538 /  
+&OVERLAP kn1=82  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=  9.437 isc=1 ipc=0 ia=2 ib=1 nam=1 ampl= 0.744 / 
+&OVERLAP kn1=83  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be= 11.561 isc=1 ipc=0 ia=4 ib=1 nam=1 ampl=-0.032 / 
+&OVERLAP kn1=84  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be= 11.561 isc=1 ipc=0 ia=4 ib=1 nam=1 ampl= 0.399 /  
+&OVERLAP kn1=85  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=  6.773 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl=-0.925 / 
+&OVERLAP kn1=86  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=  6.773 isc=1 ipc=0 ia=1 ib=2 nam=1 ampl= 0.197 / 
+&OVERLAP kn1=87  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be= 11.083 isc=1 ipc=0 ia=4 ib=2 nam=1 ampl=-0.555 /  
+&OVERLAP kn1=88  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=  2.757 isc=1 ipc=0 ia=2 ib=3 nam=1 ampl=-0.936 / 
+&OVERLAP kn1=89  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=  2.757 isc=1 ipc=0 ia=2 ib=3 nam=1 ampl= 0.645 /  
+&OVERLAP kn1=90  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=  4.881 isc=1 ipc=0 ia=4 ib=3 nam=1 ampl=-0.456 / 
+&OVERLAP kn1=91  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=  0.100 isc=1 ipc=0 ia=1 ib=4 nam=1 ampl=-0.650 / 
+&OVERLAP kn1=92  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=  1.978 isc=1 ipc=0 ia=2 ib=4 nam=1 ampl= 0.732 /  
+&OVERLAP kn1=93  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=  1.978 isc=1 ipc=0 ia=2 ib=4 nam=1 ampl= 0.549 /  
+&OVERLAP kn1=94  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 7 be=  4.102 isc=1 ipc=0 ia=4 ib=4 nam=1 ampl= 0.200 / 
+&OVERLAP kn1=95  ic1=9 ic2=8 in= 1 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 7 be=  4.102 isc=1 ipc=0 ia=4 ib=4 nam=1 ampl=-0.114 /  
+&OVERLAP kn1=96  ic1=9 ic2=8 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 5 be=  0.100 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 1.000/  
+!-------------------------------------------------------------------------------------------------------------------------
+!									 5he d+9Be->7Li+4He
+!-------------------------------------------------------------------------------------------------------------------------
+
+&OVERLAP kn1=900  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 2 l=0 sn= 1.5 ia=1 j= 1.5 ib=1 kbpot= 7 be=  9.618 isc=1 ipc=0  nam=1 ampl=-0.690 /  
+&OVERLAP kn1=901  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 0.5 ib=1 kbpot= 7 be=  9.618 isc=1 ipc=0  nam=1 ampl=-0.619 / 
+&OVERLAP kn1=902  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 1.5 ib=1 kbpot= 7 be=  9.618 isc=1 ipc=0  nam=1 ampl=-0.402 /  
+&OVERLAP kn1=903  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 2.5 ib=1 kbpot= 7 be=  9.618 isc=1 ipc=0  nam=1 ampl=-0.040 / 
+&OVERLAP kn1=904  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 2 l=0 sn= 0.5 ia=1 j= 0.5 ib=1 kbpot= 7 be= 13.618 isc=1 ipc=0  nam=1 ampl=-0.523 / 
+&OVERLAP kn1=905  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 0.5 ia=1 j= 1.5 ib=1 kbpot= 7 be= 13.618 isc=1 ipc=0  nam=1 ampl= 0.410 / 
+&OVERLAP kn1=907  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 2 l=0 sn= 1.5 ia=1 j= 1.5 ib=2 kbpot= 7 be=  9.140 isc=1 ipc=0  nam=1 ampl=-0.881 /
+&OVERLAP kn1=908  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 0.5 ib=2 kbpot= 7 be=  9.140 isc=1 ipc=0  nam=1 ampl=-0.226 /
+&OVERLAP kn1=909  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 1.5 ib=2 kbpot= 7 be=  9.140 isc=1 ipc=0  nam=1 ampl=-0.551 / 
+&OVERLAP kn1=910  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 2 l=0 sn= 0.5 ia=1 j= 0.5 ib=2 kbpot= 7 be= 13.140 isc=1 ipc=0  nam=1 ampl=-0.337 / 
+&OVERLAP kn1=911  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 0.5 ia=1 j= 1.5 ib=2 kbpot= 7 be= 13.140 isc=1 ipc=0  nam=1 ampl= 0.464 / 
+&OVERLAP kn1=912  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 2.5 ib=3 kbpot= 7 be=  4.988 isc=1 ipc=0  nam=1 ampl= 0.687 / 
+&OVERLAP kn1=913  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 3.5 ib=3 kbpot= 7 be=  4.988 isc=1 ipc=0  nam=1 ampl= 0.768 / 
+&OVERLAP kn1=914  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 0.5 ia=1 j= 2.5 ib=3 kbpot= 7 be=  8.988 isc=1 ipc=0  nam=1 ampl= 0.639 / 
+&OVERLAP kn1=915  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 2 l=0 sn= 1.5 ia=1 j= 1.5 ib=4 kbpot= 7 be=  2.158 isc=1 ipc=0  nam=1 ampl= 0.702 / 
+&OVERLAP kn1=916  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 1.5 ib=4 kbpot= 7 be=  2.158 isc=1 ipc=0  nam=1 ampl=-0.554 / 
+&OVERLAP kn1=917  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 2.5 ib=4 kbpot= 7 be=  2.158 isc=1 ipc=0  nam=1 ampl=-0.433 / 
+&OVERLAP kn1=918  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 1.5 ia=1 j= 3.5 ib=4 kbpot= 7 be=  2.158 isc=1 ipc=0  nam=1 ampl=-0.314 / 
+&OVERLAP kn1=919  ic1=1 ic2=10 in= 1 kind=0 ch1='z' nn= 1 l=2 sn= 0.5 ia=1 j= 1.5 ib=4 kbpot= 7 be=  6.158 isc=1 ipc=0  nam=1 ampl= 0.555 / 
+&OVERLAP kn1=920  ic1=1 ic2=10 in= 2 kind=0 ch1='z' nn= 3 l=0 sn= 1.5 ia=1 j= 1.5 ib=1 kbpot= 9 be=  2.467 isc=1 ipc=0  nam=1 ampl= 0.750 /
+&OVERLAP kn1=921  ic1=1 ic2=10 in= 2 kind=0 ch1='z' nn= 2 l=2 sn= 1.5 ia=1 j= 1.5 ib=1 kbpot= 9 be=  2.467 isc=1 ipc=0  nam=1 ampl=-0.744 /  
+&OVERLAP kn1=922  ic1=1 ic2=10 in= 2 kind=0 ch1='z' nn= 2 l=2 sn= 0.5 ia=1 j= 1.5 ib=1 kbpot= 9 be=  6.467 isc=1 ipc=0  nam=1 ampl= 0.248 / 
+&OVERLAP /
+
+
+!----------------------------------------------------------------------------------------------------------------------------
+!									np transfer couplings
+!----------------------------------------------------------------------------------------------------------------------------
+&COUPLING icto= 2 icfrom= 1 kind=7 ip1= 1 ip2=-1 ip3= 0   / 
+&CFP /
+&COUPLING icto= 3 icfrom= 2 kind=7 ip1= 0 ip2= 0 ip3= 0   /
+&CFP /
+
+!----------------------------------------------------------------------------------------------------------------------------
+!									pn transfer couplings
+!----------------------------------------------------------------------------------------------------------------------------
+&COUPLING icto= 4 icfrom= 1 kind=7 ip1= 1 ip2=-1 ip3= 0   /
+&CFP /
+&COUPLING icto= 5 icfrom= 4 kind=7 ip1= 0 ip2=-1 ip3= 0   /
+&CFP /
+
+!----------------------------------------------------------------------------------------------------------------------------
+!									d transfer couplings
+!----------------------------------------------------------------------------------------------------------------------------
+&COUPLING icto= 6 icfrom= 1 kind=7 ip1= 1 ip2= 0 ip3= 0   /
+&CFP /
+
+!----------------------------------------------------------------------------------------------------------------------------
+!									na transfer couplings
+!----------------------------------------------------------------------------------------------------------------------------
+&COUPLING icto= 7 icfrom= 2 kind=7 ip1= 1 ip2=-1 ip3= 0   /
+&CFP /
+
+!----------------------------------------------------------------------------------------------------------------------------
+!									an transfer couplings
+!----------------------------------------------------------------------------------------------------------------------------
+&COUPLING icto= 8 icfrom= 1 kind=7 ip1= 1 ip2=-1 ip3= 0   /
+&CFP /
+&COUPLING icto= 9 icfrom= 8 kind=7 ip1= 0 ip2=-1 ip3= 0   /
+&CFP /
+
+!----------------------------------------------------------------------------------------------------------------------------
+!									5He transfer couplings
+!----------------------------------------------------------------------------------------------------------------------------
+&COUPLING icto= 10 icfrom= 1 kind=7 ip1= 1 ip2=-1 ip3= 0   /
+&CFP /
+&COUPLING /
+
+
+
+

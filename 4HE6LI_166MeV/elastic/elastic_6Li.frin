@@ -1,0 +1,20 @@
+4He(6Li,6Li)4He   MeV seq and sim
+NAMELIST
+&FRESCO hcm=0.05 rmatch=  19.01 rintp=0.10 hnl=0.25 rnl=16.00
+   centre=-1.25
+   jtmin=0.0  jtmax=55 absend=-1.0 thmin=4.00 thmax=-176.00 thinc=1.00
+   iter=1 iblock=1 nnu=36  chans=1 xstabl=1 smats=2
+   pel=1   elab=  166.0 TRENEG=1 /
+
+&PARTITION namep='He-4' massp=4.0 zp=2 namet='Li-6'  masst= 6.0 zt=3  nex=1  /
+&STATES jp=0.0 bandp=1 ep=0.0  cpot=30 jt= 1.0 bandt=1 et=   0.000 /
+&PARTITION /
+
+&POT kp=10 type=0 p(1:3)=	0.00	1.00  	2.11 /
+&POT kp=10 type=1 p(1:6)=	102.5 1.78 0.820 11.8 4.11 0.950 	/
+
+!&POT kp=30 type=0 ap=0.0 at=1.0 rc=2.1  /
+&POT kp=30 type=1 shape=9 p(1:3)= 1.0 2.5 0.0 /
+&POT /
+&OVERLAP /
+&COUPLING /

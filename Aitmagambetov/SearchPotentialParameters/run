@@ -1,0 +1,5 @@
+#!/bin/bash
+#command for searching potential in sfresco
+
+sfresco < cmd.info 
+rm fort.*

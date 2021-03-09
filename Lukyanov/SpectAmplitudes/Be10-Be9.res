@@ -1,0 +1,517 @@
+Thu Nov 15 14:16:18 MSK 2018
+fort.jinr.ru
+          SHELL MODEL CODE ANTOINE
+          by Etienne CAURIER
+
+THE USE OF THIS CODE IS AUTHORIZED UPON ACKNOWLEDGEMENT OF THE INTELLECTUAL PROPERTY 
+BY QUOTING THE FOLLOWING REFERENCES:
+
+E. CAURIER, shell model code ANTOINE,
+IRES, STRASBOURG 1989-2004
+
+E. CAURIER, F. NOWACKI
+Acta Physica Polonica 30 (1999) 705
+
+E. CAURIER, G. MARTINEZ-PINEDO, F. NOWACKI, A. POVES, A. P. ZUKER
+Reviews of Modern Physics 77, No 2, April 2005
+
+
+
+ SIZE OF ARRAY F     =      200 000 000
+
+
+  *********** CAS=  4  ********************
+
+ USUAL LANCZOS  PIVOT RANDOM
+
+  ***** FLUID=1    4 PARTICLES  JUMP     MAX=  0
+
+        SHELL     N=0     L= 1     2*J= 3     CLAS= 0
+        SHELL     N=0     L= 1     2*J= 1     CLAS= 0
+
+  ***** FLUID=2    2 PARTICLES  JUMP     MAX=  0
+
+        SHELL     N=0     L= 1     2*J= 3     CLAS= 0
+        SHELL     N=0     L= 1     2*J= 1     CLAS= 0
+
+                M=  0     PARITY=0     JUMP MAX=  0
+ NCONF           1           1           3
+ NCONF           2           1           3
+  NUMBER OF SLATER DETERMINANTS=      15      15
+  DIM MATRIX=        38     NB(M,P)=  3
+ FINDIM AFTER BFONC            0         244
+ COHEN-KURATH INTEAR
+ NO DENSITY DEPENDENCE FOR H
+ INDIVIDUAL ENERGIES   1.63000   2.27000
+ INDIVIDUAL ENERGIES   1.63000   2.27000
+         NUMBER OF MATRIX ELEMENTS (NLJ(I),I=1,4)=     6
+  SPACE= 1     2-BODY (I,J,K,L)=   10     H(I,J)=      0      8
+  SPACE= 2     2-BODY (I,J,K,L)=   10     H(I,J)=      0      8
+  SPACE= 1     1-BODY (I,J,K,K)=    2     H(I,J)=      0     12
+  SPACE= 2     1-BODY (I,J,K,K)=    2     H(I,J)=      0     12
+     H(PN) DP,DM=0  0     NMAT=      24     NTERM=        6       12
+     H(PN) DP,DM=0  1     NMAT=     192     NTERM=       26       26
+     H(PN) DP,DM=0  2     NMAT=      48     NTERM=       14       16
+     H(PN) DP,DM=0  3     NMAT=       3     NTERM=        2        2
+  WORDS STORED=      0   1418     MAXL=     454
+  SPACE= 1     2-BODY (I,J,K,L)=    4     H(I,J)=      0      3
+  SPACE= 2     2-BODY (I,J,K,L)=    4     H(I,J)=      0      3
+     H(PN) DP,DM=0  1     NMAT=      48     NTERM=       13       13
+  WORDS STORED=      0   1716     MAXL=     136
+ WE TAKE FOR PIVOT A STATE WITH T=TZ 
+ TIME REVERSAL SYMETRY           1
+ NPOS          13
+ LECT
+        E=    0.000000                          PIVOT RANDOM T=TZ  
+ D=       38 A=  4  2 2*M= 0 P=0 RVT= 1 2*J= -1 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+  RVT= 1     DIMJ=  3
+  ITER=  1     DIA=     5.618935     NONDIA=     5.768629
+  ITER=  2     DIA=    13.836795     NONDIA=     7.196841
+ END OF LANCZOS AT ITERATION N           3
+  ITER=  3     DIA=     6.544270     NONDIA=     0.000000
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+            EIGENVALUE -0.00000000      2*J=  0
+     0.56831  -0.55356   0.60876
+            EIGENVALUE  2.00000000      2*J=  4
+    -0.75221  -0.04969   0.65704
+            EIGENVALUE  4.00000000      2*J=  8
+     0.33347   0.83132   0.44464
+ STOR  ZJ 1                 0
+ STOR  ZJ 2                 4
+
+
+     STATE 2*J=  0     LANCZOS UNTIL CONVERGENCE OF THE EIGENVALUE N=  1
+  ITER=  1     DIA=   -24.834130     NONDIA=     6.868888
+  ITER=  2     DIA=   -28.193306     NONDIA=     9.511187
+  ITER=  3     DIA=   -25.614228     NONDIA=     7.958332
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           3
+  -38.592739  -25.104625  -14.944301
+  CONVERGENCE DELTA E= 13.758609
+  ITER=  4     DIA=   -14.853218     NONDIA=     0.727790
+  ITER=  5     DIA=   -19.179949     NONDIA=     4.096912
+  ITER=  6     DIA=   -21.786719     NONDIA=     7.502845
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           6
+  -39.453410  -26.982455  -24.784931  -18.051233  -16.158610   -9.030912
+  CONVERGENCE DELTA E=  0.860671
+ END OF LANCZOS AT ITERATION N           7
+  ITER=  7     DIA=    -8.676979     NONDIA=     0.000000
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           7
+  -39.453416  -27.107471  -26.875231  -18.193021  -17.420466   -9.035072
+   -5.053853
+  CONVERGENCE DELTA E=  0.000006
+    MATRIX TO DIAGONALIZE   DIAGONAL
+    -24.834130275  -28.193306335  -25.614228031  -14.853217654  -19.179949443
+    -21.786719196   -8.676979067
+                        NON DIAGONAL 
+      6.868887803    9.511186727    7.958331927    0.727789512    4.096912160
+      7.502844915
+ STATE KEPT           1
+  -0.331492   0.705526  -0.595858   0.192980  -0.007310   0.001891
+  -0.000461
+ STOR ON FILE            50
+        E=  -39.453416                          PIVOT RANDOM T=TZ  
+ D=       38 A=  4  2 2*M= 0 P=0 RVT= 1 2*J=  0 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+ ELAPSED TIME   3.90625000E-03
+     0.0039     0.0000     0.0000     0.0000
+     0.0000     0.0000     0.0000     0.0000     0.0000
+
+
+     STATE 2*J=  4     LANCZOS UNTIL CONVERGENCE OF THE EIGENVALUE N=  2
+  ITER=  1     DIA=   -18.615832     NONDIA=     7.066889
+  ITER=  2     DIA=   -17.698344     NONDIA=     7.977354
+  ITER=  3     DIA=   -19.818703     NONDIA=     7.005391
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           3
+  -29.200145  -19.140220   -7.792514
+  ITER=  4     DIA=   -19.675570     NONDIA=     8.163161
+  ITER=  5     DIA=   -25.510342     NONDIA=     7.171982
+  ITER=  6     DIA=   -22.385452     NONDIA=     4.333149
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           6
+  -35.364424  -29.722353  -22.880645  -17.954971  -11.626905   -6.154945
+  CONVERGENCE DELTA E=  6.164278 10.582133
+  ITER=  7     DIA=   -19.137998     NONDIA=     7.401282
+  ITER=  8     DIA=   -26.587360     NONDIA=     4.587465
+  ITER=  9     DIA=   -22.899465     NONDIA=     6.777259
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           9
+  -35.704417  -32.871520  -29.720619  -23.792893  -21.569495  -18.363797
+  -13.266328  -10.903535   -6.136461
+  CONVERGENCE DELTA E=  0.339994  3.149167
+  ITER= 10     DIA=   -25.431633     NONDIA=     2.859279
+  ITER= 11     DIA=   -19.444110     NONDIA=     2.066618
+  ITER= 12     DIA=   -15.015320     NONDIA=     2.078024
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+          12
+  -35.749410  -34.024001  -30.219681  -29.101947  -23.285859  -20.598413
+  -18.832079  -16.383964  -14.046959  -12.977759  -10.863665   -6.136392
+  CONVERGENCE DELTA E=  0.044993  1.152480
+  ITER= 13     DIA=   -18.605068     NONDIA=     1.745078
+ END OF LANCZOS AT ITERATION N          14
+  ITER= 14     DIA=   -19.574823     NONDIA=     0.000000
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+          14
+  -35.749411  -34.024025  -30.219781  -29.102159  -23.287153  -21.368709
+  -20.447503  -18.865148  -17.830724  -16.202771  -13.364026  -12.938662
+  CONVERGENCE DELTA E=  0.000001  0.000024
+    MATRIX TO DIAGONALIZE   DIAGONAL
+    -18.615832202  -17.698343909  -19.818702747  -19.675569538  -25.510342467
+    -22.385451700  -19.137998024  -26.587359726  -22.899465288  -25.431633156
+    -19.444109927  -15.015320474  -18.605068334  -19.574822510
+                        NON DIAGONAL 
+      7.066888847    7.977354380    7.005391049    8.163161260    7.171982021
+      4.333149240    7.401282219    4.587464901    6.777258716    2.859279012
+      2.066618148    2.078023590    1.745077720
+ STATE KEPT           1
+   0.057112  -0.138468   0.262730  -0.439785   0.640501  -0.413846
+   0.216230  -0.243016   0.136490  -0.094296   0.016750  -0.001690
+   0.000207  -0.000022
+ STATE KEPT           2
+   0.043844  -0.095594   0.156794  -0.209085   0.232954  -0.038553
+  -0.282021   0.589794  -0.501101   0.423308  -0.084335   0.009308
+  -0.001272   0.000154
+ STOR ON FILE            50
+        E=  -35.749411                          PIVOT RANDOM T=TZ  
+ D=       38 A=  4  2 2*M= 0 P=0 RVT= 1 2*J=  4 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+ STOR ON FILE            50
+        E=  -34.024025                          PIVOT RANDOM T=TZ  
+ D=       38 A=  4  2 2*M= 0 P=0 RVT= 1 2*J=  4 T-TZ= 0 COUL=0 N=  2 JUMP= 0
+ ELAPSED TIME   1.17187500E-02
+     0.0000     0.0000     0.0000     0.0000
+     0.0039     0.0078     0.0000     0.0000     0.0000
+
+  GROUND-STATE (AMONG THE READ STATES) ENERGY=   -39.45342
+
+ 2*J=  0 T-TZ= 0 COUL=0 N=  1 P=0 2*M= 0 C= 0  EXC=   0.00000 E=   -39.45342
+ 2*J=  4 T-TZ= 0 COUL=0 N=  1 P=0 2*M= 0 C= 0  EXC=   3.70400 E=   -35.74941
+ 2*J=  4 T-TZ= 0 COUL=0 N=  2 P=0 2*M= 0 C= 0  EXC=   5.42939 E=   -34.02402
+    REWIND FILE            50
+
+  TIME FOR THIS OPTION=          0.023
+  ************************************************************
+
+  *********** CAS=  4  ********************
+
+ USUAL LANCZOS  PIVOT RANDOM
+
+  ***** FLUID=1    3 PARTICLES  JUMP     MAX=  0
+
+        SHELL     N=0     L= 1     2*J= 3     CLAS= 0
+        SHELL     N=0     L= 1     2*J= 1     CLAS= 0
+
+  ***** FLUID=2    2 PARTICLES  JUMP     MAX=  0
+
+        SHELL     N=0     L= 1     2*J= 3     CLAS= 0
+        SHELL     N=0     L= 1     2*J= 1     CLAS= 0
+
+                M=  1     PARITY=1     JUMP MAX=  0
+ NCONF           1           1           3
+ NCONF           2           1           3
+  NUMBER OF SLATER DETERMINANTS=      19      15
+  DIM MATRIX=        62     NB(M,P)=  5
+ FINDIM AFTER BFONC            0         198
+ COHEN-KURATH INTEAR
+ NO DENSITY DEPENDENCE FOR H
+ INDIVIDUAL ENERGIES   1.63000   2.27000
+ INDIVIDUAL ENERGIES   1.63000   2.27000
+         NUMBER OF MATRIX ELEMENTS (NLJ(I),I=1,4)=     6
+  SPACE= 1     2-BODY (I,J,K,L)=   10     H(I,J)=      0     20
+  SPACE= 2     2-BODY (I,J,K,L)=   10     H(I,J)=      0     10
+  SPACE= 1     1-BODY (I,J,K,K)=    2     H(I,J)=      0     24
+  SPACE= 2     1-BODY (I,J,K,K)=    2     H(I,J)=      0     16
+     H(PN) DP,DM=0  0     NMAT=      24     NTERM=       12       16
+     H(PN) DP,DM=0  1     NMAT=     192     NTERM=       44       32
+     H(PN) DP,DM=0  2     NMAT=      48     NTERM=       20       16
+     H(PN) DP,DM=0  3     NMAT=       3     NTERM=        5        4
+  WORDS STORED=      0   1851     MAXL=     472
+  SPACE= 1     2-BODY (I,J,K,L)=    4     H(I,J)=      0      8
+  SPACE= 2     2-BODY (I,J,K,L)=    4     H(I,J)=      0      4
+     H(PN) DP,DM=0  1     NMAT=      48     NTERM=       22       16
+  WORDS STORED=      0   2263     MAXL=     145
+ WE TAKE FOR PIVOT A STATE WITH T=TZ 
+ TIME REVERSAL SYMETRY           0
+ NPOS           9
+ LECT
+        E=    0.000000                          PIVOT RANDOM T=TZ  
+ D=       62 A=  3  2 2*M= 1 P=1 RVT= 0 2*J= -1 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+  RVT= 0     DIMJ=  5
+  ITER=  1     DIA=     8.699615     NONDIA=     6.348306
+  ITER=  2     DIA=    13.278468     NONDIA=     6.202554
+  ITER=  3     DIA=    16.837083     NONDIA=     7.574949
+  ITER=  4     DIA=     9.726402     NONDIA=     4.176862
+ END OF LANCZOS AT ITERATION N           5
+  ITER=  5     DIA=     6.458432     NONDIA=     0.000000
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+            EIGENVALUE  0.50000000      2*J=  1
+     0.31603  -0.38330   0.43531  -0.59627   0.45627
+            EIGENVALUE  1.50000000      2*J=  3
+     0.64662  -0.47869   0.05426   0.30000  -0.50971
+            EIGENVALUE  2.50000000      2*J=  5
+     0.40069   0.01896  -0.42318   0.42230   0.69402
+            EIGENVALUE  3.50000000      2*J=  7
+     0.53274   0.61263  -0.27645  -0.47109  -0.20622
+            EIGENVALUE  4.50000000      2*J=  9
+    -0.19405  -0.49826  -0.74300  -0.39268  -0.08846
+ STOR  ZJ 1                 3
+ STOR  ZJ 2                 5
+ STOR  ZJ 3                 7
+
+
+     STATE 2*J=  3     LANCZOS UNTIL CONVERGENCE OF THE EIGENVALUE N=  1
+  ITER=  1     DIA=   -10.963069     NONDIA=     7.565150
+  ITER=  2     DIA=   -17.560992     NONDIA=    12.411632
+  ITER=  3     DIA=   -17.541931     NONDIA=     5.397257
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           3
+  -31.440047  -12.944188   -1.681757
+  CONVERGENCE DELTA E= 20.476979
+  ITER=  4     DIA=    -7.633999     NONDIA=     7.390727
+  ITER=  5     DIA=   -17.845484     NONDIA=     7.508639
+  ITER=  6     DIA=   -10.844294     NONDIA=     7.289790
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           6
+  -32.073092  -24.895459  -13.986138   -8.827849   -3.310069    0.702837
+  CONVERGENCE DELTA E=  0.633044
+  ITER=  7     DIA=   -17.005335     NONDIA=     6.049980
+  ITER=  8     DIA=   -13.244832     NONDIA=     3.732495
+  ITER=  9     DIA=   -15.350273     NONDIA=     2.783277
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           9
+  -32.081829  -26.983766  -22.052084  -16.627433  -13.732016   -9.768517
+   -5.643328   -2.045457    0.944220
+  CONVERGENCE DELTA E=  0.008738
+  ITER= 10     DIA=   -14.761766     NONDIA=     3.018593
+  ITER= 11     DIA=    -8.499359     NONDIA=     1.157766
+  ITER= 12     DIA=   -10.912222     NONDIA=     2.492025
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+          12
+  -32.081831  -26.988347  -22.149613  -18.510481  -14.545653  -13.561171
+  -11.168948   -9.596211   -6.853571   -5.609141   -2.042951    0.944362
+  CONVERGENCE DELTA E=  0.000002
+    MATRIX TO DIAGONALIZE   DIAGONAL
+    -10.963068551  -17.560992143  -17.541931301   -7.633999217  -17.845484339
+    -10.844294239  -17.005334565  -13.244832399  -15.350272570  -14.761766088
+     -8.499359149  -10.912222471
+                        NON DIAGONAL 
+      7.565149952   12.411632008    5.397256524    7.390727107    7.508638964
+      7.289789932    6.049979976    3.732495055    2.783276721    3.018593014
+      1.157766130
+ STATE KEPT           1
+  -0.244677   0.683038  -0.649976   0.180271  -0.121660   0.053226
+  -0.029753   0.010011  -0.002296   0.000377  -0.000048   0.000003
+ STOR ON FILE            51
+        E=  -32.081831                          PIVOT RANDOM T=TZ  
+ D=       62 A=  3  2 2*M= 1 P=1 RVT= 0 2*J=  3 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+ ELAPSED TIME   1.17187500E-02
+     0.0000     0.0000     0.0000     0.0000
+     0.0078     0.0039     0.0000     0.0000     0.0000
+
+
+     STATE 2*J=  5     LANCZOS UNTIL CONVERGENCE OF THE EIGENVALUE N=  1
+  ITER=  1     DIA=   -17.243194     NONDIA=     6.071032
+  ITER=  2     DIA=   -19.711912     NONDIA=     9.733156
+  ITER=  3     DIA=   -13.300581     NONDIA=     4.174273
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           3
+  -28.928166  -16.218301   -5.109220
+  CONVERGENCE DELTA E= 11.684972
+  ITER=  4     DIA=   -16.972268     NONDIA=     6.410157
+  ITER=  5     DIA=   -17.510743     NONDIA=     4.110952
+  ITER=  6     DIA=   -13.022192     NONDIA=     3.552835
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           6
+  -29.437532  -24.490102  -16.785782  -13.976266   -9.006110   -4.065099
+  CONVERGENCE DELTA E=  0.509366
+  ITER=  7     DIA=   -15.504783     NONDIA=     3.546927
+  ITER=  8     DIA=   -12.092467     NONDIA=     3.011459
+  ITER=  9     DIA=   -12.173260     NONDIA=     4.833773
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           9
+  -29.438830  -24.601142  -19.425391  -16.590079  -14.599855  -12.436582
+   -9.056152   -7.328659   -4.054709
+  CONVERGENCE DELTA E=  0.001299
+  ITER= 10     DIA=   -16.286827     NONDIA=     2.103014
+ END OF LANCZOS AT ITERATION N          11
+  ITER= 11     DIA=   -12.384646     NONDIA=     0.000000
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+          11
+  -29.438831  -24.601467  -20.475986  -18.995772  -16.511030  -13.863018
+  -12.406343  -10.835454   -8.313956   -6.706441   -4.054576
+  CONVERGENCE DELTA E=  0.000000
+    MATRIX TO DIAGONALIZE   DIAGONAL
+    -17.243194351  -19.711912260  -13.300580960  -16.972267640  -17.510742915
+    -13.022191900  -15.504782861  -12.092466997  -12.173260451  -16.286826570
+    -12.384645596
+                        NON DIAGONAL 
+      6.071032493    9.733156347    4.174272555    6.410157312    4.110951773
+      3.552835115    3.546926555    3.011458725    4.833773369    2.103014467
+ STATE KEPT           1
+   0.363679  -0.730567   0.503255  -0.242181   0.143280  -0.038101
+   0.010268  -0.002173   0.000423  -0.000159   0.000020
+ STOR ON FILE            51
+        E=  -29.438831                          PIVOT RANDOM T=TZ  
+ D=       62 A=  3  2 2*M= 1 P=1 RVT= 0 2*J=  5 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+ ELAPSED TIME   7.81250000E-03
+     0.0000     0.0039     0.0000     0.0000
+     0.0000     0.0039     0.0000     0.0000     0.0000
+
+
+     STATE 2*J=  7     LANCZOS UNTIL CONVERGENCE OF THE EIGENVALUE N=  1
+  ITER=  1     DIA=   -16.956902     NONDIA=     5.683762
+  ITER=  2     DIA=   -17.590269     NONDIA=     5.135972
+  ITER=  3     DIA=   -12.962507     NONDIA=     7.711806
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           3
+  -24.309035  -14.938232   -8.262411
+  CONVERGENCE DELTA E=  7.352133
+  ITER=  4     DIA=   -17.046143     NONDIA=     2.431911
+  ITER=  5     DIA=   -15.791857     NONDIA=     3.693986
+  ITER=  6     DIA=   -16.786514     NONDIA=     1.048499
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           6
+  -25.889050  -21.824002  -19.474041  -13.141542  -11.754626   -5.050930
+  CONVERGENCE DELTA E=  1.580015
+ END OF LANCZOS AT ITERATION N           7
+  ITER=  7     DIA=   -16.419993     NONDIA=     0.000000
+ DIAGO TRIDIAG           0
+ FIN DIAGO TRIDIAG           0
+           7
+  -25.889428  -21.841080  -19.645086  -16.354070  -13.060125  -11.713623
+   -5.050774
+  CONVERGENCE DELTA E=  0.000379
+    MATRIX TO DIAGONALIZE   DIAGONAL
+    -16.956901875  -17.590269043  -12.962507220  -17.046142864  -15.791856673
+    -16.786513995  -16.419993329
+                        NON DIAGONAL 
+      5.683761763    5.135971869    7.711805634    2.431910856    3.693986426
+      1.048499493
+ STATE KEPT           1
+  -0.364367   0.572634  -0.522084   0.493776  -0.139969   0.057534
+  -0.006370
+ STOR ON FILE            51
+        E=  -25.889428                          PIVOT RANDOM T=TZ  
+ D=       62 A=  3  2 2*M= 1 P=1 RVT= 0 2*J=  7 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+ ELAPSED TIME   3.90625000E-03
+     0.0000     0.0000     0.0000     0.0039
+     0.0000     0.0000     0.0000     0.0000     0.0000
+
+  GROUND-STATE (AMONG THE READ STATES) ENERGY=   -32.08183
+
+ 2*J=  3 T-TZ= 0 COUL=0 N=  1 P=1 2*M= 1 C= 0  EXC=   0.00000 E=   -32.08183
+ 2*J=  5 T-TZ= 0 COUL=0 N=  1 P=1 2*M= 1 C= 0  EXC=   2.64300 E=   -29.43883
+ 2*J=  7 T-TZ= 0 COUL=0 N=  1 P=1 2*M= 1 C= 0  EXC=   6.19240 E=   -25.88943
+    REWIND FILE            51
+
+  TIME FOR THIS OPTION=          0.035
+  ************************************************************
+
+  *********** CAS= 26  ********************
+
+ SPECTROSCOPIC FACTORS (ONE PARTICLE)
+ FINAL   STATE
+
+  ***** FLUID=1    3 PARTICLES  JUMP     MAX=  0
+
+        SHELL     N=0     L= 1     2*J= 3     CLAS= 0
+        SHELL     N=0     L= 1     2*J= 1     CLAS= 0
+
+  ***** FLUID=2    2 PARTICLES  JUMP     MAX=  0
+
+        SHELL     N=0     L= 1     2*J= 3     CLAS= 0
+        SHELL     N=0     L= 1     2*J= 1     CLAS= 0
+
+                M=  1     PARITY=1     JUMP MAX=  0
+ INITIAL STATE
+
+  ***** FLUID=1    4 PARTICLES  JUMP     MAX=  0
+
+        SHELL     N=0     L= 1     2*J= 3     CLAS= 0
+        SHELL     N=0     L= 1     2*J= 1     CLAS= 0
+
+  ***** FLUID=2    2 PARTICLES  JUMP     MAX=  0
+
+        SHELL     N=0     L= 1     2*J= 3     CLAS= 0
+        SHELL     N=0     L= 1     2*J= 1     CLAS= 0
+
+                M=  0     PARITY=0     JUMP MAX=  0
+ FINAL STATES
+ LECT
+        E=  -32.081831                          PIVOT RANDOM T=TZ  
+ D=       62 A=  3  2 2*M= 1 P=1 RVT= 0 2*J=  3 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+ LECT
+        E=  -29.438831                          PIVOT RANDOM T=TZ  
+ D=       62 A=  3  2 2*M= 1 P=1 RVT= 0 2*J=  5 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+ LECT
+        E=  -25.889428                          PIVOT RANDOM T=TZ  
+ D=       62 A=  3  2 2*M= 1 P=1 RVT= 0 2*J=  7 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+ INITIAL STATES
+ LECT
+        E=  -39.453416                          PIVOT RANDOM T=TZ  
+ D=       38 A=  4  2 2*M= 0 P=0 RVT= 1 2*J=  0 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+
+  OPERATOR  103 *********
+
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  3    -1.5336880
+
+  OPERATOR  101 *********
+
+ LECT
+        E=  -35.749411                          PIVOT RANDOM T=TZ  
+ D=       38 A=  4  2 2*M= 0 P=0 RVT= 1 2*J=  4 T-TZ= 0 COUL=0 N=  1 JUMP= 0
+
+  OPERATOR  103 *********
+
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  3     0.3553356
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  5     1.0612046
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  7    -0.9426668
+
+  OPERATOR  101 *********
+
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  3     0.2604025
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  5    -0.0561809
+ LECT
+        E=  -34.024025                          PIVOT RANDOM T=TZ  
+ D=       38 A=  4  2 2*M= 0 P=0 RVT= 1 2*J=  4 T-TZ= 0 COUL=0 N=  2 JUMP= 0
+
+  OPERATOR  103 *********
+
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  3    -0.4354366
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  5     0.3548387
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  7     0.5831799
+
+  OPERATOR  101 *********
+
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  3     0.7734060
+  SPECTROSCOPIC FACTOR AMPLITUDE FOR STATE 2*J=  5    -0.3740595
+    REWIND FILE            51
+    REWIND FILE            50
+
+  TIME FOR THIS OPTION=          0.012
+  ************************************************************
+ NORMAL END OF THE JOB     
+0.03user 0.03system 0:00.07elapsed 97%CPU (0avgtext+0avgdata 7964maxresident)k
+0inputs+1464outputs (0major+501minor)pagefaults 0swaps
+Thu Nov 15 14:16:18 MSK 2018

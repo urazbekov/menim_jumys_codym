@@ -1,0 +1,99 @@
+Be9(d,a)Li7   19.5MeV two step
+NAMELIST
+&FRESCO hcm=0.05 rmatch=  30.00 rintp=0.10 hnl=0.1 rnl=16.00
+   centre=-1.2 
+   jtmin=0.0  jtmax=30 absend=-1.0 thmin=15.00 thmax=-90.00 thinc=1.00 
+   iter=1 nnu=36  chans=1 xstabl=1 smats=2
+pel=1   elab=  35.0 /
+
+&PARTITION
+ namep='d' massp=2.0 zp=1 namet='Be9'  masst= 9.0 zt=4  nex=-1  /
+&STATES jp=1.0 bandp=1 ep=0.0  cpot=1 jt= 1.5 bandt=-1 et=   0.000 /
+
+&PARTITION
+ namep='t' massp=3.0 zp=1  namet='Be8' masst= 8.0 zt= 4 nex=-1 qval=4.593 / 
+&STATES jp=0.5 bandp=1 ep=0.0 cpot=2 jt= 0.0 bandt= 1 et=   0.000   /
+
+&PARTITION
+ namep='3He' massp=3.0 zp=2  namet='Li8' masst= 8.0 zt= 3 nex=2 qval=-11.393 / 
+&STATES jp=0.5 bandp=1 ep=0.0 cpot=3 jt= 2.0 bandt= 1 et=   0.000 /
+&STATES jp=0.5 bandp=1 ep=0.0 cpot=3 jt= 2.0 bandt= 1 et=   0.000 /
+
+
+&PARTITION
+ namep='He4'  massp=4.0 zp= 2 namet='Li7' masst= 7.0 zt= 3 nex=-1  qval=7.1522/
+&STATES jp=0.0 bandp=1 ep=0.0 cpot=4 jt= 1.5 bandt=-1 et=0.0000   /
+
+&PARTITION
+ namep='Li6'  massp=6.0 zp= 3 namet='5He' masst= 5.0 zt= 2 nex=-1  qval=0.989/
+&STATES jp=1.0 bandp=1 ep=0.0 cpot=4 jt= 1.5 bandt=-1 et=0.0000  outfam=37 /
+&partition /
+
+
+&POT kp=1 type=0 p1=2.00 p2=9.00  p3=0.809 / # d+9Be fold 35MeV new 1
+&POT kp=1 type=1 p1=71.98 p2=0.728 p3=0.88 p4=4.62 p5=0.842 p6=0.647 /
+&POT kp=1 type=2 p1=0.000000 p2=0.000000 p3=0.000000 p4=11.366 p5=0.696 p6=0.864 /
+&POT kp=1 type=3 p1=-6.988 p2=0.73 p3=0.88 /
+
+&POT kp=2 type=0 ap=3.0 at=8.0 rc=0.826  / # 3H + 8Be Global NRV pot
+&POT kp=2 type=1 p1=142.668 p2=0.607 p3=0.722 p4=23.429 p5=0.715 p6=1.157 /
+&POT kp=2 type=2 p1=0.0 p2=0.0 p3=0.0 p4=24.803 p5=0.592 p6=0.835 /
+
+&POT kp=3 type=0 ap=3.0 at=8.0 rc=0.755  / # 3He + 8Li global pot
+&POT kp=3 type=1 p1=161.17 p2=0.697 p3=0.72 p4=46.43 p5=0.813 p6=0.88 /
+
+&POT kp=4 type=0 ap=7.0 at=4.0 rc=0.606  / # 7Li+4He Global pot
+&POT kp=4 type=1 p1=114.2 p2=0.599 p3=0.853  p4=38.781 p5=0.81 p6=0.809  /
+
+&POT kp=5 type=0 at= 2.0 rc=   1.25  /
+&POT kp=5 type=1 p1=52.355 p2=1.25 p3=0.65 / # t=d+n potential
+
+&POT kp=6 type=0 at= 8.0 rc=   1.25  /
+&POT kp=6 type=1 p1=41.799 p2=1.25 p3=0.65 / # Be9=Be8+n potential
+
+&POT kp=7 type=0 at= 2.0 rc=   1.25  /
+&POT kp=7 type=1 p1=52.252 p2=1.25 p3=0.65 / # 3He=d+p potential
+
+&POT kp=8 type=0 at= 8.0 rc=   1.25  /
+&POT kp=8 type=1 p1=77.075 p2=1.25 p3=0.65 / # Be9=Li8+p potential
+
+&POT kp=9 type=0 ap=2.0 at=2.0 rc=0.787/	# a=d+d system potential
+&POT kp=9 type=1 p1=64.18 p2=0.787 p3=0.65 /
+
+&POT kp=10 type=0 ap=2.0 at=7.0 rc=0.819/
+&POT kp=10 type=1 p1=78.72 p2=0.819 p3=0.65 / 9Be=7Li+d system potential
+
+&POT kp=11 type=0 ap=0.0 at=2.0 rc=1.25/
+&POT kp=11 type=1 p1=98.746 p2=1.25 p3=0.65 / 6Li=d+a system potential 2S0
+
+&POT kp=12 type=0 ap=0.0 at=2.0 rc=1.25/
+&POT kp=12 type=1 p1=124.133 p2=1.25 p3=0.65 / 6Li=d+a system potential 1D2
+
+&POT kp=13 type=0 ap=0.0 at=5.0 rc=1.25/
+&POT kp=13 type=1 p1=110.89 p2=1.25 p3=0.65 / 9Be=a+5He system potential 2D2
+
+&POT kp=14 type=0 ap=0.0 at=5.0 rc=1.25/
+&POT kp=14 type=1 p1=103.426 p2=1.25 p3=0.65 / 9Be=a+5He system potential 3S0
+&pot /
+
+&OVERLAP kn1=1 ic1=2 ic2=1 in= 1 kind=0 nn= 1 l=0 sn= 0.5 j= 0.5 kbpot= 5 be=  6.257 isc= 1 ipc=0 / # <t|d>
+&OVERLAP kn1=2 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 6 be= 1.665 isc=1 ipc=0 / # <9Be|8Be>
+
+&OVERLAP kn1=3 ic1=3 ic2=1 in= 1 kind=0 nn= 1 l=0 sn= 0.5 j= 0.5 kbpot= 7 be=  5.493 isc= 1 ipc=0 / # <3He|d>
+&OVERLAP kn1=4 ic1=1 ic2=3 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 8 be= 16.886 isc=1 ipc=0 / # <9Be|8Li>
+
+&OVERLAP kn1=5 ic1=4 ic2=1 in=1 kind=0 nn=1 l=0 sn=1.0 j=1.0 kbpot=9 be=23.847  isc=1 ipc=0 / # <a|d>
+&OVERLAP kn1=6 ic1=1 ic2=4 in=2 kind=0 nn=2 l=0 sn=1.0 j=1.0 kbpot=10 be=16.694  isc=1 ipc=0 / # <9Be|7Li>
+
+&OVERLAP kn1=7 ic1=5 ic2=1 in=1 kind=0 nn=2 l=0 sn=0.0 j=0.0 kbpot=11 be=1.474  isc=1 ipc=0 / # <6Li|d>
+&OVERLAP kn1=8 ic1=1 ic2=5 in=1 kind=0 nn=1 l=2 sn=0.0 j=2.0 kbpot=12 be=1.474  isc=1 ipc=0 / # <6Li|d>
+
+&OVERLAP kn1=9  ic1=5 ic2=1 in=2 kind=0 nn=2 l=2 sn=0.0 j=2.0 kbpot=13 be=2.463  isc=1 ipc=0 / # <9Be|5He>
+&OVERLAP kn1=10 ic1=1 ic2=5 in=2 kind=0 nn=3 l=0 sn=0.0 j=0.0 kbpot=14 be=2.463  isc=1 ipc=0 / # <9Be|5He>
+&OVERLAP /
+
+&COUPLING icto= 3 icfrom= 1 kind=7 ip1= 0 ip2=-1 ip3= 0   / 
+&CFP  in=1 ib=1 ia=1 kn=3 a= 1.225  /
+&CFP  in=2 ib=1 ia=1 kn=4 a=-0.948  /
+&CFP /
+&COUPLING /

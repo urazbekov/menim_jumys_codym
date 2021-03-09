@@ -1,0 +1,16 @@
+'fresco.in' 'fresco.out' 9 1
+
+ &variable kind=1 name='V_vol' 		kp=1 pline=2 col=1  valmin=0.7 valmax=165.0 /
+ &variable kind=1 name='r0_vol' 	kp=1 pline=2 col=2 /
+ &variable kind=1 name='a_vol' 		kp=1 pline=2 col=3 /
+
+ &variable kind=1 name='W_vol' 		kp=1 pline=2 col=4 valmin=0.7 valmax=4.0  /
+ &variable kind=1 name='rw_vol' 	kp=1 pline=2 col=5 valmin=0.6 valmax=2.5/
+ &variable kind=1 name='aw_vol' 	kp=1 pline=2 col=6 valmin=0.5 valmax=2.5  /
+
+ &variable kind=1 name='W_surf' 	kp=1 pline=3 col=4  valmin=0.7 valmax=65.0  /
+ &variable kind=1 name='rw_surf' 	kp=1 pline=3 col=5 valmin=0.6 valmax=2.5/
+ &variable kind=1 name='aw_surf' 	kp=1 pline=3 col=6 valmin=0.5 valmax=2.5  /
+ 
+ &data data_file= 'data.exp' type=0 energy=18.0 iscale=2  idir=0 lab=F  abserr=T /
+ &

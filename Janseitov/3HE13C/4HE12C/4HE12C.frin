@@ -1,0 +1,41 @@
+n14(f17,ne18)c13 @ 170 MeV;
+NAMELIST
+ &FRESCO hcm=0.03 rmatch=40 rintp=0.20 hnl=0.1 rnl=5.00 centre=0.0
+	 jtmin=0.0  jtmax=40 absend=-1.0
+	 thmin=0.00 thmax=180.00 thinc=0.10
+	 iter=1 nnu=36
+	 chans=1 xstabl=1
+	 elab=50.0  /
+
+ &PARTITION namep='3He'  massp=3. zp=2 namet='13C'  masst=13. zt=6 nex=1  /
+ &STATES jp=0.5 bandp=1 ep=0.0 cpot=1 jt=0.5 bandt=-1 et=0.0000  /
+
+ &PARTITION namep='4He' massp=4. zp=2 namet='12C'  masst=12. zt=6 qval=15.631 nex=1  /
+ &STATES jp=0.0 bandp=1 ep=0.0  cpot=2 jt=1.0 bandt=1 et=15.110  /
+ &partition /
+
+ &POT kp=1 ap=1.000 at=0.000 rc=3.057  /
+ &POT kp=1 type=1 p1=147.796 p2=2.822 p3=0.872  p4=38.0 p5=3.292 p6=0.88  /
+ &POT kp=1 type=3 p1=2.5 p2=2.822 p3=0.72  p4=0.0 p5=0.0 p6=0.0  /
+
+ &POT kp=2 ap=1.0 at=0.0 rc=2.976  /
+ &POT kp=2 type=1 p1=91.528 p2=2.933 p3=0.581  p4=22.83 p5=3.087 p6=0.674  /
+
+ &POT kp=3 at=12 rc=1.25  /
+ &POT kp=3 type=1 p1=27.508 p2=1.2 p3=0.65   /
+
+ &POT kp=4 at=1 rc=1.2  /
+ &POT kp=4 type=1 p1=71.0 p2=1.2 p3=0.65   /
+ &pot /
+
+ &Overlap kn1=1 ic1=1 ic2=2 in=1 kind=0 nn=1 l=0 sn=0.5 j=0.5 kbpot=3 be=20.578 isc=1 ipc=0 /
+ &Overlap kn1=2 ic1=2 ic2=1 in=2 kind=0 nn=1 l=1 sn=0.5 j=1.5 kbpot=4 be= 4.946 isc=1 ipc=0 /
+ &Overlap kn1=3 ic1=2 ic2=1 in=2 kind=0 nn=1 l=1 sn=0.5 j=0.5 kbpot=4 be= 4.946 isc=1 ipc=0 /
+ &overlap /
+
+ &Coupling icto=-2 icfrom=1 kind=7 ip1=1 ip2=0 ip3=0 /
+ &CFP in=1 ib=1 ia=1 kn=1 a=1.414  /
+ &CFP in=2 ib=1 ia=1 kn=2 a=0.1  /
+ &CFP in=2 ib=1 ia=1 kn=3 a=1.0  /
+ &CFP /
+ &coupling /

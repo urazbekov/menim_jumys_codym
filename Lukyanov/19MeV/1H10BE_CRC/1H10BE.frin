@@ -1,0 +1,79 @@
+Lukyanov Experiments
+NAMELIST
+&FRESCO hcm=0.1 rmatch=  20.00 rintp=0.5 hnl=0.1 rnl=16.00
+   centre=-1.2    jtmin=0.0  jtmax=20 absend=-1.0 thmin=1.00 thmax=-180.00 thinc=1.00 
+   iter=1 iblock=5 nnu=36  chans=1 xstabl=1 smats=2
+   pel=1   elab=  19.5 /
+
+&PARTITION
+ namep='d' massp=2.0 zp=1 namet='Be9'  masst= 9.0 zt=4  nex=-3  /
+&STATES jp=1.0 bandp=1 ep=0.0  cpot=1 jt= 1.5 bandt=-1 et=   0.000 /
+&STATES copyp=1	  cpot=1 jt= 2.5 bandt=-1 et=   2.43 /
+&STATES copyp=1   cpot=1 jt= 3.5 bandt=-1 et=   6.38 /
+
+&PARTITION
+ namep='p' massp=1.0 zp=1  namet='10Be' masst= 10.0 zt= 4 nex=3 qval=4.588 / 
+&STATES jp=0.5 bandp=1 ep=0.0	cpot=2 jt=0.0 bandt=1 et=0.000   /
+&STATES copyp=1 				cpot=2 jt=2.0 bandt=1 et=3.36   /
+&STATES copyp=1 				cpot=2 jt=2.0 bandt=1 et=5.96   /
+&partition /
+
+
+
+&POT kp=1 type=0 p(1:3)=	2.00	9.00  	0.811 /	
+&POT kp=1 type=1 p(1:6)=	0.0 	0.001 	0.54	0.00 	0.00 	0.00	/
+&POT kp=1 type=1 p(1:6)=	83.0 	0.757 	0.642	0.7 	0.888 	0.899	/
+&POT kp=1 type=13 p(1:6)=	0.00 	2.41 	0.00	0.00 	0.00 	0.00	/
+&STEP ib=1 ia=2 k=2 str= 3.0 /
+&STEP ib=2 ia=1 k=2 str= 3.0 /
+&STEP ib=1 ia=1 k=2 str= 1.9 /
+&STEP ib=2 ia=2 k=2 str= 3.9 /
+&STEP /
+&POT kp=1 type=2 p(1:6)=	0.00 	0.00 	0.00	5.18 	0.728 	1.148	/
+
+
+&POT kp=2 type=0 p(1:3)=	1.00	0.00  	3.508 /	
+&POT kp=2 type=1 p(1:6)=	59.173 	2.404 	0.4676	1.317 	2.404 	0.676	/
+&POT kp=2 type=13 p(1:6)=	0.00 	2.41 	0.00	0.00 	0.00 	0.00	/
+&STEP ib=1 ia=2 k=2 str= 3.7 /
+&STEP ib=2 ia=1 k=2 str= 4.7 /
+&STEP ib=1 ia=3 k=2 str= 3.7 /
+&STEP ib=3 ia=1 k=2 str= 4.7 /
+&STEP ib=2 ia=2 k=2 str= 3.0 /
+&STEP ib=3 ia=3 k=2 str= 3.0 /
+&STEP /
+&POT kp=2 type=2 p(1:6)=	0.0 	0.00 	0.00	11.291 	2.819 	0.515	/
+&POT kp=2 type=3 p(1:6)=	5.423 	1.907 	0.59	0.00 	0.00 	0.00	/
+
+
+
+&POT kp=5 type=0 ap=0.0 at= 1.0 rc=   1.25  /
+&POT kp=5 type=1 p1=63.313 p2=1.25 p3=0.65 / # d=p+n potential
+
+&POT kp=6 type=0 ap=0.0 at= 9.0 rc=   1.25  /
+&POT kp=6 type=1 p1=50.904 p2=1.25 p3=0.65 / # 
+&pot /
+
+&OVERLAP kn1=1 ic1=1 ic2=2 in= 1 kind=0 nn= 1 l=0 sn= 0.5 j= 0.5 kbpot= 5 be= 2.225 isc=1 ipc=0 ia=1 ib=1 nam=1 ampl= 1.0/ 
+
+&OVERLAP kn1=2 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 6 be= 6.812 isc=1 ipc=0 ib=1 ia=1 nam=1 ampl=-1.533 / # <10be 0.0|9be 0.0>
+
+&OVERLAP kn1=4 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 6 be= 3.445 isc=1 ipc=0 ib=2 ia=1 nam=1 ampl= 0.355/ # <10be 3.36|9be 0.0>
+&OVERLAP kn1=5 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 6 be= 3.445 isc=1 ipc=0 ib=2 ia=1 nam=1 ampl=-0.260/ # <10be 3.36|9be 0.0>
+&OVERLAP kn1=6 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 6 be= 5.882 isc=1 ipc=0 ib=2 ia=2 nam=1 ampl= 1.061 / # <10be 3.36|9be 2.43>
+&OVERLAP kn1=7 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 6 be= 5.882 isc=1 ipc=0 ib=2 ia=2 nam=1 ampl= 0.056/ # <10be 3.36|9be 2.43>
+&OVERLAP kn1=8 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 6 be= 9.832 isc=1 ipc=0 ib=2 ia=3 nam=1 ampl=-0.942 / # <10be 3.36|9be 6.38>
+
+&OVERLAP kn1=14 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 6 be= 0.852 isc=1 ipc=0 ib=3 ia=1 nam=1 ampl=-0.435/ # <10be 5.96|9be 0.0>
+&OVERLAP kn1=15 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 6 be= 0.852 isc=1 ipc=0 ib=3 ia=1 nam=1 ampl=-0.773/ # <10be 5.96|9be 0.0>
+&OVERLAP kn1=16 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 6 be= 3.282 isc=1 ipc=0 ib=3 ia=2 nam=1 ampl= 0.354 / # <10be 5.96|9be 2.43>
+&OVERLAP kn1=17 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 0.5 kbpot= 6 be= 3.282 isc=1 ipc=0 ib=3 ia=2 nam=1 ampl=-0.374 / # <10be 5.96|9be 2.43>
+&OVERLAP kn1=18 ic1=1 ic2=2 in= 2 kind=0 nn= 1 l=1 sn= 0.5 j= 1.5 kbpot= 6 be= 7.232 isc=1 ipc=0 ib=3 ia=3 nam=1 ampl= 0.583 / # <10be 5.96|9be 6.38>
+&OVERLAP /
+
+&COUPLING icto=2 icfrom= 1 kind=7 ip1= 1 ip2=-1 ip3= 0   / 
+&CFP /
+&COUPLING /
+
+
+

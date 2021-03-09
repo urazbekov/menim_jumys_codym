@@ -1,0 +1,17 @@
+d + 9Be elastic
+NAMELIST
+ &FRESCO  hcm=0.100 rmatch= 20.000 jtmin= 0.0 jtmax=  200.0
+     thmin= 1.00 thmax=75.00 thinc= 1.00 xstabl=1 
+     elab=18   /
+ &PARTITION namep='d' massp=2 zp=1 namet='13C' masst=13 zt=6 nex=1  /
+ &STATES jp=1.0 bandp=1 ep=0.0 cpot=1 jt=0.5 bandt=-1 et=0.0000  /
+ &partition /   
+
+&POT kp=1 type=0 p1=2.00 p2=13.00  p3=0.846 /	
+&POT kp=1 type=1 p1=76.262 p2=0.805 p3=0.747 p4=1.18 p5=2.49 p6=2.39 /
+&POT kp=1 type=2 p1=0.0 p2=0.0 p3=0.0 p4=12.731 p5=1.037 p6=0.552 /
+ &pot /   
+ &overlap /   
+ &coupling /
+
+  

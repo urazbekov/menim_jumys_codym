@@ -1,0 +1,12 @@
+Ca 40(p,t)   Ca 38 @   35.000 MeV  Q =  20.45 MeV
+NAMELIST
+
+&FRESCO hcm=0.05 rmatch=  30.00 rintp=0.20 hnl=0.1 rnl=16.00
+
+   centre=-1.2 hnn=0.300 rnn=10.00 rmin=0.30
+
+   jtmin=0.0  jtmax=20 absend=-1.0 thmin=0.00 thmax=180.00 thinc=1.00
+
+   iter=1 nnu=36  chans=1 xstabl=1 smats=2
+
+pel=2   elab=  35.000 /
