@@ -15,22 +15,28 @@ NAMELIST
  
  &POT kp=1 ap=2.000 at=13.000 rc=0.846  / Lohr et al
  &POT kp=1 type=1 p1=83.139 p2=0.768 p3=0.718 p4=0.0 p5=1.2 p6=0.500  /
- &POT kp=1 type=11         p1=0.0 p2=1.0 p3=0.0/
+ &POT kp=1 type=11         p1=0.0 p2=1.3 p3=1.0/
  &POT kp=1 type=2 p1=0.00 p2=0.768 p3=0.718 p4=6.245 p5=0.826 p6=0.917  /
- &POT kp=1 type=11         p1=0.0  p2=1.0  p3=0. /
 
  &POT kp=2 ap=13.000 at=0.000 rc=1.5  / Guratzsch et al
- &POT kp=2 type=1 p1=100.5 p2=1.0 p3=0.8 p4=5.04 p5=0.9 p6=0.600  /
- &POT kp=2 type=13 shape=10  p1=1.00 p2=1.00 p3=1/
- &STEP ib=2 ia=1 k=2 str= 0.3 /
- &STEP ib=3 ia=1 k=2 str= 1.2 /
+ &POT kp=2 type=1  p1=100.5 p2=1.0 p3=0.8 p4=5.04 p5=0.9 p6=0.600  /
+ &POT kp=2 type=13 shape=10  p2=1.0 /
+ &STEP ib=1 ia=2 k=2 str= 0.9 /
+ &STEP ib=2 ia=1 k=2 str= 0.9 /
+ &STEP ib=2 ia=2 k=2 str=-0.9 /
+ 
+ &STEP ib=3 ia=1 k=2 str= 1.1 /
+ &STEP ib=1 ia=3 k=2 str= 1.1 /
+ &STEP ib=3 ia=3 k=2 str= 1.1 /
  &STEP /
  &POT kp=2 type=2 p1=0.00 p2=0.0 p3=0.0 p4=5.04 p5=2.0 p6=0.6  /
 
- 
  &POT kp=3 ap=13.000 at=0.000 rc=1.5  / Guratzsch et al
  &POT kp=3 type=1 p1=100.5 p2=1.0 p3=0.8 p4=5.04 p5=0.9 p6=0.600  /
- &POT kp=3 type=2 p1=0.00 p2=0.0 p3=0.0 p4=5.04 p5=2.0 p6=0.6  /
+ &POT kp=3 type=2                        p4=5.04 p5=2.0 p6=0.6  /
+
+ &POT kp=4 ap=2.000 at=13.000 rc=0.848  / nrv ws
+ &POT kp=4 type=1 p1=112.658 p2=0.747 p3=0.749 p4=24.211 p5=0.919 p6=0.533  /
  &POT / 
  
 &OVERLAP /
