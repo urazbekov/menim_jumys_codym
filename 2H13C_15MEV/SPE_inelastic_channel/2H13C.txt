@@ -1,9 +1,9 @@
 2H+13C at 14.5 MeV;                                                                
 NAMELIST
- &FRESCO hcm=0.1 rmatch=60  iter=1 
-	 jtmin=0.0 jtmax=50 absend= 0.0010 
+ &FRESCO hcm=0.1 rmatch=60  iter=1
+	 jtmin=0.0 jtmax=30 absend= 0.0010 
 	 thmin=10.00 thmax=-120.00 thinc=1.00 
- 	 chans=1 smats=2  xstabl=1 
+ 	 chans=1 smats=2  xstabl=1 iblock=2
 	 elab=14.5 /
 
  &PARTITION namep='d' massp=2.00 zp=1 
@@ -15,35 +15,29 @@ NAMELIST
  &PARTITION /
  
  &POT kp=1 ap=2.000 at=13.000 rc=0.846  / Lohr et al
- &POT kp=1 type=1 p1=83.139 p2=0.768 p3=0.718 p4=0.0 p5=1.2 p6=0.500  /
- &POT kp=1 type=11         p1=0.9 p2=0.0 p3=0.0/
- &POT kp=1 type=2 p1=0.00 p2=0.768 p3=0.718 p4=6.245 p5=0.826 p6=0.917  /
- &POT kp=1 type=11         p1=0.9  p2=0.0  p3=0. /
+ &POT kp=1 type=1 p1=90.139 p2=0.768 p3=0.718  /
+ &POT kp=1 type=2 p4=2.0 p5=0.826 p6=0.917  /
 
  &POT kp=2 ap=13.000 at=0.000 rc=1.5  / Guratzsch et al
- &POT kp=2 type=1 p1=100.5 p2=1.0 p3=0.8 p4=5.04 p5=0.9 p6=0.600  /
- &POT kp=2 type=11         p1=1 p2=0.9 p3=0.5/
- &POT kp=2 type=2 p1=0.00 p2=0.0 p3=0.0 p4=5.04 p5=2.0 p6=0.6  /
- &POT kp=2 type=11         p1=1 p2=0.9 p3=0.5/
+ &POT kp=2 type=1 p1=102.5 p2=1.0 p3=0.8 p4=2.00 p5=0.9 p6=0.600  /
+ &POT kp=2 type=2 p4=2.04 p5=2.0 p6=0.6  /
  
-&POT kp=11 type=0 p1=0.00 p2=13.00  p3=0.809 /	# to be folded d + 13-C pot
+&POT kp=11 type=0 p1=2.00 p2=13.00  p3=0.809 /	# to be folded d + 13-C pot
 
 &POT kp=12 type=0 p1=12.0 p2=2.0 p3=1.5 /      ---------> d + 12-C <---------
 &POT kp=12 type=1 p1=96.139 p2=0.677 p3=0.8 p4=0.0 p5=1.2 p6=0.500 	 /
 &POT kp=12 type=2 p1=0.00 p2=0.768 p3=0.718 p4=41.245 p5=0.922 p6=0.568 	 /
 
-&POT kp=13 type=0 p1=12.00 p2=1.00  p3=1.169 /      ---------> d + n <---------
-&POT kp=13 type=1 p1=40.139 p2=0.525 p3=0.8 p4=0.0 p5=1.2 p6=0.500  /
-&POT kp=13 type=2 p1=0.00 p2=0.768 p3=0.718 p4=15.245 p5=0.715 p6=0.521  /
+&POT kp=8 type=0 p1=2.00 p2=0.00  p3=0.65 /      ---------> d + n <---------
+&POT kp=8 type=2 p1=12.00 p2=1.1 p3=0.8 p4=8.245 p5=1.1 p6=0.9  /
 
 &POT kp=14 type=0 p1=0.00 p2=12.00  p3=1.25 /      ---------> n + 12-C <---------
 &POT kp=14 type=1 p(1:6)= 39.778		1.25		0.65			 /
-
 &POT / 
  
-&OVERLAP kn1=1 ic1=2 ic2=1 in=2 nn=1 l=1 sn=0.5 j=0.5 kbpot=14 be=4.946 ib=1 ia=1  isc=1 ipc=1 nam=1 ampl=0.78/
-&OVERLAP kn1=2 ic1=2 ic2=1 in=2 nn=2 l=0 sn=0.5 j=0.5 kbpot=14 be=1.857 ib=2 ia=1 isc=1 ipc=1 nam=1 ampl=0.93    /
+&OVERLAP kn1=1 ic1=2 ic2=1 in=2 nn=1 l=1 sn=0.5 j=0.5 kbpot=14 be=4.946 ib=1 ia=1  isc=1 ipc=1 nam=1 ampl=0.70/
+&OVERLAP kn1=2 ic1=2 ic2=1 in=2 nn=2 l=0 sn=0.5 j=0.5 kbpot=14 be=1.857 ib=2 ia=1 isc=1 ipc=1 nam=1 ampl=0.81 /
 &OVERLAP /
 
-&COUPLING icto=2 icfrom=1 kind=4 ip1=1 ip2=0 ip3=0 p1=13.0 p2=12.0   /
+&COUPLING icto=2 icfrom=1 kind=4 ip1=1 ip2=0 ip3=0 p1=8.0 p2=1.0   /
 &COUPLING /
